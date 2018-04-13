@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://jogi.blog/"
+baseurl = "https://jogi.blog/"
 themesDir = "themes"
 languageCode = "en-us"
 title = "Vashishtha Jogi"
