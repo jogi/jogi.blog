@@ -9,6 +9,7 @@ googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
 disqusShortname = ""
 pygmentsUseClasses=true
+pygmentsCodeFences=true
 
 [params]
 	name = "Vashishtha Jogi"

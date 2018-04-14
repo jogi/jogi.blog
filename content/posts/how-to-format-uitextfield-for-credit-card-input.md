@@ -12,7 +12,7 @@ title = "How to format UITextField for credit card input"
 
 So you are writing an app which has credit card entry form and you want to format the credit card numbers and expiry as xxxx-xxxx-xxxx-xxxx, xx/xx. How do you do that? Let’s first start with how can you pass your `UITextField` text to formatter (assume they exist for now, more on that in a while). Let’s say you have two UITextFields `creditCardNumberTextField` and `creditCardExpiryTextField`. The input in them needs to be formatted as an when any new input is done. So, setup triggers for that in `viewDidLoad`.
 
-{{< highlight objc >}}
+```objc
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,11 +37,11 @@ So you are writing an app which has credit card entry form and you want to forma
         self.ccExpiryTextField.text = formattedText;
     }
 }
-{{< /highlight >}}
+```
 
 Let’s write the formatter now.
 
-{{< highlight objc >}}
+```objc
 #import <Foundation/Foundation.h>
 
 @interface StringUtils : NSObject
@@ -115,11 +115,11 @@ Let’s write the formatter now.
     NSCharacterSet *special = [NSCharacterSet characterSetWithCharactersInString:@"/+-() "];
     return [[input componentsSeparatedByCharactersInSet:special] componentsJoinedByString:@""];
 }
-{{< /highlight >}}
+```
 
 The above code will properly format credit card numbers and expiry dates as you enter them in the textfield. There is one more thing that is still remaining. You want the input to stop when the input textfield has all the credit card numbers inputted or has the expiry inputted. That can be achieved by the following code:
 
-{{< highlight objc >}}
+```objc
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if ([string isEqualToString:@""]) { // when backspace is hit
@@ -134,4 +134,4 @@ The above code will properly format credit card numbers and expiry dates as you 
     }
     return YES;
 }
-{{< /highlight >}}
+```
