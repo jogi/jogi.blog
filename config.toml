@@ -55,4 +55,4 @@ pygmentsUseClasses=true
 
 [outputs]
 	home = ["HTML", "JSON", "RSS"]
-	page = ["html"]
+	page = ["HTML"]
