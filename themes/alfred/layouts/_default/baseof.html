@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-	<head>
-    {{ partial "header.html" . }}
-    </head>
+	{{ partial "header.html" . }}
 <body>
     <div class="container">
-        {{ partial "nav.html" . }}
+        {{ if not .IsHome }}
+            {{ partial "nav.html" . }}
+        {{ end }}
         <section id="wrapper">
-            {{ partial "blog-header.html" . }}
+            {{ if .IsHome }}
+                {{ partial "blog-header.html" . }}
+            {{ end }}
 
             {{ block "main" . -}}{{- end }}
 

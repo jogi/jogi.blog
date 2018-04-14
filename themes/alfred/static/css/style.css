@@ -88,27 +88,50 @@ img {
 
 pre, code {
     font-size: 0.9em;
+	overflow-x: scroll;
 }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+	color: rgba(0, 0, 0, 0.4);
+	text-shadow: #fff 0 1px 0;
+	font-size: 0.8em;
+	text-align: center;
+	margin: 3em auto;
+}
+
+footer p {
+	margin: 0 0 1em;
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.4);
+	text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #212226;
+	text-decoration: underline;
+	transition: all ease-out 0.2s;
+}
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
 
 .container {
     max-width: 800px;
 }
 
 .container .post {
-    padding: 4em 0;
+    padding: 3em 0;
 }
 
-.container .post:after {
-	position: absolute;
-	width: 32em;
-	height: 1px;
-	left: 50%;
-	bottom: 0;
-	margin-left: -16em;
-	content: '';
-	background: #e5e4e1;
-}
-.container .post.featured .post-title:after {
+.container .post .featured .post-title:after {
 	position: absolute;
 	width: 1em;
 	height: 1em;
@@ -124,13 +147,95 @@ pre, code {
 }
 
 /* ==========================================================================
-   Header
+   Navigation
+   ========================================================================== */
+.main-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.4);
+	margin: 2vw auto;
+	max-width: 100%;
+	opacity: 1;
+	padding-left: 0;
+	padding-right: 0;
+	text-rendering: optimizeLegibility;
+	width: auto;
+	z-index: auto;
+	font-size: 1em;
+	text-transform: none;
+	line-height: 1em;
+}
+.main-nav:after {
+	position: absolute;
+	margin: 2vw auto;
+	width: 100%;
+	height: 1px;
+	content: '';
+	background: #e5e4e1;
+}
+
+.left {
+	text-align: left;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.right {
+	text-align: right;
+	-ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.nav-title {
+	position: relative;
+	display: block;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.nav-title a {
+	text-decoration: none;
+	font-weight: inherit;
+	color: inherit;
+}
+.nav-description {
+	position: relative;
+	display: block;
+	z-index: 10;
+	margin: 0.25em 0;
+	padding: 0;
+	font-size: 0.7em;
+	line-height: 0.7em;
+}
+
+.nav-item a {
+	color: #b3b3b3;
+}
+
+.nav-item a:active, .nav-item a:hover {
+	color: #000;
+}
+
+/* ==========================================================================
+   Blog Header
    ========================================================================== */
 
 #blog-header {
-	position: relative;
-	padding: 4em 0;
-	text-align: center;
+   	position: relative;
+   	padding: 3em 0;
+   	text-align: center;
 }
 #blog-header:after {
 	position: absolute;
@@ -142,54 +247,25 @@ pre, code {
 	content: '';
 	background: #e5e4e1;
 }
-.blog-cover {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 5;
-	background: no-repeat scroll center center / cover #000000;
-	animation: 0.5s ease-in forwards fadein;
-}
-.blog-cover:after {
-	position: absolute;
-	width: 100%;
-	height: 6em;
-	left: 0;
-	bottom: 0;
-	z-index: 8;
-	content: '';
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
-}
-.blog-logo {
-	position: fixed;
-	max-width: 2em;
-	left: 0;
-	top: 0;
-	margin: 1em;
-	z-index: 200;
-}
-.blog-logo img {
-	display: block;
-	margin: 0 auto;
-}
+
 .blog-name {
-	position: relative;
-	display: block;
-	z-index: 10;
-	margin: 0;
-	padding: 0;
-	font-weight: 700;
-	font-size: 3em;
-	line-height: 1em;
+   	position: relative;
+   	display: block;
+   	z-index: 10;
+   	margin: 0;
+   	padding: 0;
+   	font-weight: 700;
+   	font-size: 3em;
+   	line-height: 1em;
 	text-decoration: none;
 }
+
 .blog-name a {
 	text-decoration: none;
 	font-weight: inherit;
 	color: inherit;
 }
+
 .blog-description {
 	position: relative;
 	display: block;
@@ -201,7 +277,7 @@ pre, code {
 }
 
 /* ==========================================================================
-   Post
+   Post Content
    ========================================================================== */
 
 #post-header {
@@ -242,10 +318,10 @@ pre, code {
 .post-title {
 	position: relative;
 	z-index: 10;
-	margin: 0 0 0.25em;
-	font-size: 2em;
+	margin: 0 0 0.5em;
+	font-size: 1.5em;
 	line-height: 1em;
-	font-weight: 700;
+	font-weight: 600;
 	text-indent: -1px;
 	color: #000000;
 }
@@ -256,6 +332,15 @@ pre, code {
 	text-decoration: none;
 	color: inherit;
 	font-weight: inherit;
+}
+.post-title a:hover {
+	-webkit-transition-property: border;
+	-moz-transition-property: border;
+	transition-property: border;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	border-bottom: 1px solid;
 }
 .post-meta {
 	position: relative;
@@ -285,11 +370,15 @@ pre, code {
 	border-color: rgba(255,255,255,0.5);
 }
 .post-excerpt p {
+	font-size: 1em;
 	margin: 0.5em 0 0;
 }
+.post-excerpt a,
 .post-content a {
 	border-bottom: 1px solid #f26a3d;
 }
+.post-excerpt a:hover,
+.post-excerpt a:focus
 .post-content a:hover,
 .post-content a:focus {
 	color: #f26a3d;

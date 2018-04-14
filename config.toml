@@ -8,11 +8,12 @@ theme = "alfred"
 googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
 disqusShortname = ""
+pygmentsUseClasses=true
 
 [params]
 	name = "Vashishtha Jogi"
 	description = ""
-	bio = "Photographer. Engineer. Traveller."
+	bio = "engineer. photographer."
 	# Enter optionally your twitter account
 	twitter = "VashishthaJogi"
 	enableRSS = true
@@ -27,7 +28,7 @@ disqusShortname = ""
 
 	# Navigation links
 	home = ""
-	subscribe = ""
+	subscribe = "subscribe"
 	# Pagination links
 	olderPosts = ""
 	newerPosts = ""
@@ -45,3 +46,13 @@ disqusShortname = ""
 [social]
     twitter  = "https://www.twitter.com/VashishthaJogi"
     github   = "https://www.github.com/jvashishtha"
+
+[outputFormats]
+	[outputFormats.json]
+		mediaType = "application/json"
+		baseName = "index"
+		isPlainText = true
+
+[outputs]
+	home = ["HTML", "JSON", "RSS"]
+	page = ["html"]

@@ -14,7 +14,7 @@ Recently I have been trying to do a lot of reading about some very common CS pri
 
 Starting with merge sort. Here is a very rudimentary implementation of recursive merge sort in Python (I love Python).
 
-```python
+{{< highlight python >}}
 def merge(left, right):
 	if not len(left) or not len(right):
 		return left or right
@@ -46,6 +46,6 @@ def mergesort(list):
 
 if __name__ == "__main__":
 	print mergesort([3,4,5,1,2,8,3,7,6])
-```
+{{< /highlight >}}
 
 I am not going to explain the whole merge sort algorithm. [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort) does an excellent job at that.
