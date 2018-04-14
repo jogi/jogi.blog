@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+    {{ range .Paginator.Pages }}
+        <article class="post">
+            <header class="post-header">
+                <h2 class="post-title"><a href='{{ .URL }}'>{{ .Title }}</a></h2>
+                <span class="post-meta">
+                    <time>{{ .Date.Format "January 2, 2006" }}</time>
+                     &middot; {{ with .Params.tags }}
+                    {{ if ge (len .) 1 }}
+                        {{ range . }}
+                            <a href="{{ printf "tags/%s" (. | urlize) | absURL }}">{{ . }}</a>
+                        {{ end }}
+                    {{ end }}
+                    {{ end}}
+                </span>
+                <div class="clear"></div>
+            </header>
+            <section class="post-excerpt">
+                <p>{{ .Description | markdownify }}</p>
+                <a href='{{ .URL }}'>Continue reading →</span></a>
+            </section>
+        </article>
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+
+{{ end }}
