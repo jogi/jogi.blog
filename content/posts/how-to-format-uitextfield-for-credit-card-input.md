@@ -5,7 +5,7 @@ date = 2016-09-16T05:43:00Z
 description = "So you are writing an app which has credit card entry form and you want to format the credit card numbers and expiry as xxxx-xxxx-xxxx-xxxx, xx/xx. How do you do that?"
 draft = false
 slug = "how-to-format-uitextfield-for-credit-card-input"
-tags = ["Programming"]
+tags = ["programming", "objective-c"]
 title = "How to format UITextField for credit card input"
 
 +++

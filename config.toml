@@ -5,9 +5,10 @@ title = "Vashishtha Jogi"
 enableRobotsTXT = true
 disableAliases = true
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+googleAnalytics = "UA-4839600-11"
 pygmentsUseClasses=true
 pygmentsCodeFences=true
+paginate = 10
 
 [params]
 name = "Vashishtha Jogi"

@@ -115,25 +115,6 @@ footer {
 
     .post {
         padding: 3em 0;
-
-        .featured {
-            .post-title {
-                &::after {
-                    font-size: .5em;
-                    font-weight: normal;
-                    font-style: normal;
-                    position: absolute;
-                    top: 0;
-                    left: -1.75em;
-                    width: 1em;
-                    height: 1em;
-                    margin-top: -.25em;
-                    content: '\e808';
-                    text-align: center;
-                    color: $color-yellow;
-                }
-            }
-        }
     }
 }
 
@@ -145,22 +126,15 @@ footer {
     display: flex;
     width: auto;
     max-width: 100%;
-    margin: 2vw auto;
+    margin: 1.2em auto;
     padding-right: 0;
     padding-left: 0;
+    padding-bottom: 1.2em;
     text-transform: none;
     opacity: 1;
     color: $color-light-gray;
     align-items: center;
-
-    &::after {
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        margin: 2vw auto;
-        content: '';
-        background: $color-light-gray;
-    }
+    border-bottom: 1px solid;
 }
 
 .left {
@@ -381,18 +355,9 @@ footer {
     a {
         border-bottom: 1px solid $color-orange;
 
-        &:hover {
-            color: $color-orange;
-        }
-
+        &:hover,
         &:focus {
-            .post-content {
-                a {
-                    &:hover {
-                        color: $color-orange;
-                    }
-                }
-            }
+            color: $color-orange;
         }
     }
 }
@@ -401,6 +366,7 @@ footer {
     a {
         border-bottom: 1px solid $color-orange;
 
+        &:hover,
         &:focus {
             color: $color-orange;
         }
@@ -444,11 +410,7 @@ footer {
         border-radius: 2em;
         background: #fff;
 
-        &:hover {
-            color: #fff;
-            background: $color-orange;
-        }
-
+        &:hover,
         &:focus {
             color: #fff;
             background: $color-orange;
@@ -456,10 +418,65 @@ footer {
     }
 }
 
+// Paginator
+.paginator {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .button {
+        margin: 0;
+    }
+
+    .pages {
+        font-size: .8em;
+        text-align: center;
+        margin: 0;
+        color: $color-dark-gray;
+        flex-grow: 1;
+    }
+}
+
+// Archive
+.archive-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 0 0 .5em;
+    text-indent: -1px;
+    letter-spacing: 0;
+    color: #000;
+}
+
+.archive-list {
+    a {
+        border-bottom: 1px solid $color-orange;
+
+        &:hover,
+        &:focus {
+            color: $color-orange;
+        }
+    }
+}
+
+// Media Queries - Smaller than 960px
+@media only screen and (max-width: 960px) {
+    .main-nav {
+        margin: 1em auto;
+        padding-bottom: 1em;
+    }
+}
+
 // Media Queries - Smaller than 640px
 @media only screen and (max-width: 640px) {
     html {
         font-size: 50%;
+    }
+
+    .main-nav {
+        margin: .8em auto;
+        padding-bottom: .8em;
     }
 
     .post-tags {

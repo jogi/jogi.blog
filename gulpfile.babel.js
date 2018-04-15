@@ -4,6 +4,7 @@ import gulp from 'gulp'
 import del from 'del'
 import runSequence from 'run-sequence'
 import gulpLoadPlugins from 'gulp-load-plugins'
+import cleanCSS from 'gulp-clean-css'
 import { spawn } from "child_process"
 import tildeImporter from 'node-sass-tilde-importer'
 
@@ -37,17 +38,17 @@ gulp.task('init-watch', () => {
         },
         open: false
     })
-    $.watch('src/sass/**/*.scss', () => gulp.start('sass'))
+    $.watch('src/sass/**/*.scss', () => runSequence('sass', 'minify-css'))
     $.watch('src/js/**/*.js', () => gulp.start('js-watch'))
     $.watch('src/images/**/*', () => gulp.start('images'))  
 })
 
 gulp.task('build', () => {
-    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'hugo')
+    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'minify-css', 'hugo')
 })
 
 gulp.task('build-preview', () => {
-    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'hugo-preview')
+    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'minify-css', 'hugo-preview')
 })
 
 
@@ -98,11 +99,20 @@ gulp.task('sass', () => {
     .pipe($.sassLint.format())
     .pipe($.sass({ precision: 5, importer: tildeImporter }))
     .pipe($.autoprefixer(['ie >= 10', 'last 2 versions']))
-    .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
+    .pipe($.if(isProduction, $.cssnano({ discardUnused: true, minifyFontValues: false })))
     .pipe($.size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest('static/css'))
     .pipe(browserSync.stream())
 })
+
+gulp.task('minify-css', () => {
+  return gulp.src(['static/css/normalize.css', 'static/css/skeleton.css', 'static/css/syntax.css', 'static/css/app.css'])
+    .pipe($.plumber({ errorHandler: onError }))
+    .pipe($.print())
+    .pipe(cleanCSS({ level: { 2: { all: true }}}))
+    .pipe($.concat('site.css'))
+    .pipe(gulp.dest('static/css'));
+});
 
 gulp.task('js-watch', ['js'], (cb) => {
     browserSync.reload();

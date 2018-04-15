@@ -1,11 +1,11 @@
 +++
 author = "Vashishtha Jogi"
-categories = ["startup"]
+categories = ["Startups"]
 date = 2013-05-02T05:28:00Z
-description = ""
+description = "While building Listypedia about a year back the initial feature set was huge. It was two of us working on it, me working on frontend + backend and one friend working on backend."
 draft = false
 slug = "release-quick-release-often"
-tags = ["startup"]
+tags = ["startups"]
 title = "Release quick, release often"
 
 +++

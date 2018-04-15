@@ -1,15 +1,16 @@
 {{ define "main" }}
 
-    {{ range .Paginator.Pages }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
+    {{ range $paginator.Pages }}
         <article class="post">
             <header class="post-header">
                 <h2 class="post-title"><a href='{{ .URL }}'>{{ .Title }}</a></h2>
                 <span class="post-meta">
                     <time>{{ .Date.Format "January 2, 2006" }}</time>
-                     &middot; {{ with .Params.tags }}
+                     &middot; {{ with .Params.categories }}
                     {{ if ge (len .) 1 }}
                         {{ range . }}
-                            <a href="{{ printf "tags/%s" (. | urlize) | absURL }}">{{ . }}</a>
+                            <a href="{{ printf "categories/%s" (. | urlize) | absURL }}">{{ . }}</a>
                         {{ end }}
                     {{ end }}
                     {{ end}}
@@ -23,6 +24,6 @@
         </article>
     {{ end }}
 
-    {{ template "_internal/pagination.html" . }}
+    {{ partial "site/pagination.html" . }}
 
 {{ end }}
