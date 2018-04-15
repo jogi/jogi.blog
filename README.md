@@ -28,7 +28,6 @@ A few modifications have been done to the base Atlas boilerplate code to fit my 
 * Use Hugo's inbuilt syntax highlighting with Xcode syntax style
 * Added pagination for posts with 10 posts/page by default
 * Remove Netlify CMS
-* Add Google Analytics template that overrides the inbuilt one to conform to the latest Google Tag Manager additions
 * No other javascript except Google Analytics
 * Use YAML all around (TOML is nice but I like YAML)
 * Added an [Archive](https://jogi.blog/archive/) page inspired from [David Tran](https://davidtranscend.com/blog/how-to-create-an-archives-page-with-hugo/)
