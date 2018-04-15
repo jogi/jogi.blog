@@ -22,12 +22,12 @@ let suppressHugoErrors = false;
 
 gulp.task('server', ['build'], () => {
     gulp.start('init-watch')
-    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.toml'], () => gulp.start('hugo'))
+    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.yaml'], () => gulp.start('hugo'))
 });
 
 gulp.task('server:with-drafts', ['build-preview'], () => {
     gulp.start('init-watch')
-    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.toml'], () => gulp.start('hugo-preview'))
+    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.yaml'], () => gulp.start('hugo-preview'))
 });
 
 gulp.task('init-watch', () => {

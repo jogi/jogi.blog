@@ -18,5 +18,16 @@
     <section class="post-content">
         {{ .Content }}
     </section>
+    {{ if eq (.Site.Params.displayPostTags) true }}
+        <section class="post-tags">
+            {{ with .Params.tags }}
+                {{ if ge (len .) 1 }}
+                    {{ range . }}
+                        <a href="{{ printf "tags/%s" (. | urlize) | absURL }}">#{{ . }}</a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </section>
+    {{ end }}
 </article>
 {{ end }}

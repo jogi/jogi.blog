@@ -14,6 +14,7 @@ params:
   bio: thoughts about programming and photography
   twitter: VashishthaJogi
   enableRSS: true
+  displayPostTags: true
   customCSS: []
   customJS: []
   home: ''
