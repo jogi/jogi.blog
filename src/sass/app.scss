@@ -33,6 +33,29 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
 a {
     font-weight: 400;
     transition: all ease-out .2s;
@@ -49,7 +72,7 @@ a {
 }
 
 p {
-    margin: 2em 0;
+    margin: 1.2em 0;
 }
 
 img {
