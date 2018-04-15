@@ -1,14 +1,18 @@
-+++
-author = "Vashishtha Jogi"
-categories = ["Programming"]
-date = 2016-08-09T05:39:00Z
-description = "Recently I have been trying to do a lot of reading about some very common CS principles. This is the first of the series of posts that I am going to do covering some very basic sorting algorithms, trees, linked lists, etc."
-draft = false
-slug = "how-to-implement-mergesort-in-python"
-tags = ["programming", "python", "sorting"]
-title = "How to implement Mergesort in Python"
-
-+++
+---
+author: Vashishtha Jogi
+categories:
+  - Programming
+date: 2016-08-09T05:39:00.000Z
+description: >-
+  Recently I have been trying to do a lot of reading about some very common CS principles. This is the first of the series of posts that I am going to do covering some very basic sorting algorithms, trees, linked lists, etc.
+draft: false
+slug: how-to-implement-mergesort-in-python
+tags:
+  - programming
+  - python
+  - sorting
+title: "How to implement Mergesort in\_Python"
+---
 
 Recently I have been trying to do a lot of reading about some very common CS principles. This is the first of the series of posts that I am going to do covering some very basic sorting algorithms, trees, linked lists, etc.
 

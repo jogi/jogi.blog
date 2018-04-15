@@ -1,14 +1,17 @@
-+++
-author = "Vashishtha Jogi"
-categories = ["Programming"]
-date = 2016-09-16T05:43:00Z
-description = "So you are writing an app which has credit card entry form and you want to format the credit card numbers and expiry as xxxx-xxxx-xxxx-xxxx, xx/xx. How do you do that?"
-draft = false
-slug = "how-to-format-uitextfield-for-credit-card-input"
-tags = ["programming", "objective-c"]
-title = "How to format UITextField for credit card input"
-
-+++
+---
+author: Vashishtha Jogi
+categories:
+  - Programming
+date: 2016-09-16T05:43:00.000Z
+description: >-
+  So you are writing an app which has credit card entry form and you want to format the credit card numbers and expiry as xxxx-xxxx-xxxx-xxxx, xx/xx. How do you do that?
+draft: false
+slug: how-to-format-uitextfield-for-credit-card-input
+tags:
+  - programming
+  - objective-c
+title: How to format UITextField for credit card input
+---
 
 So you are writing an app which has credit card entry form and you want to format the credit card numbers and expiry as xxxx-xxxx-xxxx-xxxx, xx/xx. How do you do that? Let’s first start with how can you pass your `UITextField` text to formatter (assume they exist for now, more on that in a while). Let’s say you have two UITextFields `creditCardNumberTextField` and `creditCardExpiryTextField`. The input in them needs to be formatted as an when any new input is done. So, setup triggers for that in `viewDidLoad`.
 

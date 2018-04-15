@@ -1,14 +1,16 @@
-+++
-author = "Vashishtha Jogi"
-categories = ["Startups"]
-date = 2013-05-02T05:28:00Z
-description = "While building Listypedia about a year back the initial feature set was huge. It was two of us working on it, me working on frontend + backend and one friend working on backend."
-draft = false
-slug = "release-quick-release-often"
-tags = ["startups"]
-title = "Release quick, release often"
-
-+++
+---
+author: Vashishtha Jogi
+categories:
+  - Startups
+date: 2013-05-02T05:28:00.000Z
+description: >-
+  While building Listypedia about a year back the initial feature set was huge. It was two of us working on it, me working on frontend + backend and one friend working on backend.
+draft: false
+slug: release-quick-release-often
+tags:
+  - startups
+title: "Release quick, release often"
+---
 
 While building Listypedia about a year back the initial feature set was huge. It was two of us working on it, me working on frontend + backend and one friend working on backend. We decided on a feature set that it will have public lists, private lists, like/unlike items added to a list, comments on individual items added to the list, like/unlike lists, share lists, blah blah blah the list goes on. We never really did significant research on what people really want and we were adding features one by one on our own.
 

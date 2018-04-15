@@ -1,14 +1,18 @@
-+++
-author = "Vashishtha Jogi"
-categories = ["How To"]
-date = 2016-05-19T05:35:00Z
-description = "The instructions on Heroku [Custom Domains](https://devcenter.heroku.com/articles/custom-domains) are good but not comprehensive enough for Godaddy."
-draft = false
-slug = "how-to-add-custom-domain-to-heroku-godaddy-version"
-tags = ["how-to", "heroku", "domain"]
-title = "How to add custom domain to Heroku [GoDaddy version]"
-
-+++
+---
+author: Vashishtha Jogi
+categories:
+  - How To
+date: 2016-05-19T05:35:00.000Z
+description: >-
+  The instructions on Heroku [Custom Domains](https://devcenter.heroku.com/articles/custom-domains) are good but not comprehensive enough for Godaddy.
+draft: false
+slug: how-to-add-custom-domain-to-heroku-godaddy-version
+tags:
+  - how-to
+  - heroku
+  - domain
+title: "How to add custom domain to Heroku [GoDaddy\_version]"
+---
 
 The instructions on Heroku [Custom Domains](https://devcenter.heroku.com/articles/custom-domains) are good but not comprehensive enough for Godaddy. Here are the instructions on how to add a custom domain (which is registered with Godaddy) to a heroku app:
 

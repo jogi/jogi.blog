@@ -1,0 +1,64 @@
+baseurl: /
+languageCode: en-us
+title: Vashishtha Jogi
+enableRobotsTXT: true
+disableAliases: true
+googleAnalytics: UA-4839600-11
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+paginate: 10
+
+params:
+  name: Vashishtha Jogi
+  description: ''
+  bio: thoughts about programming and photography
+  twitter: VashishthaJogi
+  enableRSS: true
+  customCSS: []
+  customJS: []
+  home: ''
+  subscribe: subscribe
+  olderPosts: ''
+  newerPosts: ''
+  readMore: ''
+  copyright: ''
+  aboutAuthor: I'm an blogger.
+  tweet: ''
+  share: ''
+  title404: ''
+  subtitle404: ''
+  disallow_search_engines: false
+
+social:
+  twitter: 'https://www.twitter.com/VashishthaJogi'
+  github: 'https://www.github.com/jvashishtha'
+
+mediaTypes:
+  text/netlify:
+    suffix: ''
+    delimiter: ''
+outputFormats:
+  json:
+    mediaType: application/json
+    baseName: index
+    isPlainText: true
+  REDIRECTS:
+    mediatype: text/netlify
+    baseName: _redirects
+    isPlainText: true
+    notAlternative: true
+  HEADERS:
+    mediatype: text/netlify
+    baseName: _headers
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - REDIRECTS
+    - HEADERS
+  page:
+    - HTML
