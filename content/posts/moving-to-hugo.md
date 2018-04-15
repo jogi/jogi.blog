@@ -1,27 +1,47 @@
-# Blog
+---
+author: Vashishtha Jogi
+categories:
+  - Programming
+date: 2018-04-15T14:08:55-07:00
+description: >-
+  I recently moved my blog to Hugo. After going through a few how-tos, posts about where to host it, etc. I have the final result. This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas) modified to fit my needs. Here are some notes that I took along the way.
+draft: false
+slug: moving-to-hugo
+tags:
+  - programming
+  - hugo
+  - netlify
+title: "Moving to Hugo"
+---
 
-This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). It has been modified to fit my needs.
+I have picked up blogging again. I keep telling myself that I will keep blogging this time. Not sure how long it will last, but here goes the first post after a long time. Recently I moved my blog to Hugo. After going through a few how-tos, posts about where to host it, etc. I have the final result. Here are some notes that I took along the way.
 
-**Disclaimer** - This boilerplate has been integrated with [Netlify](https://www.netlify.com/), and therefore many features are specific to the Netlify platform and may not work with other hosting providers.
+Before stumbling upon [Hugo](https://gohugo.io) I took a look at numerous other solutions. The good old Wordpress, Tumblr, Micro.blog, Ghost, Squarespace and Jekyll. Each one of those has their shortcomings. Some of them are expensive to host ($20/month for Ghost, $12/month for Squarespace), some of those are not so expensive ($4/month for Wordpress). Some of those give you a little control over design by the way of templates, some of them give you complete control (Hugo and Jekyll). I love static websites for their speed. Squarespace and Ghost are nice but they are bloated and are expensive with very little control over.
 
-**Disclaimer** - Atlas is a boilerplate (starter kit) for bespoke Hugo projects. It's not a Hugo theme and cannot be placed inside the `/themes` directory. Check the [theme](#themes) docs for more information.
+Here are the requirements I had for this blog:
 
-## Features
+* Static website
+* Cheap hosting
+* Clean design with full conrol
+* No commenting support
+* Static syntax highlighting
+* SSL support for hosting
+* [SCSS](https://sass-lang.com) support
 
-Atlas provides the following features out of the box:
+Jekyll satisfies almost all of the above requirements but it requires Ruby. I am not a huge fan of Ruby (I have been bitten in the past, details of which warrant another post). Hugo seemed like a very good option.
 
-* A set of [Gulp](/gulpfile.babel.js) tasks for SASS, Linting, ES2015, Image compression
-* Environment driven `robots.txt` file (disallows robots on everything other than production)
-* Base HTML templates with easy customisation/extension
-* [Configuration](/netlify.toml) for Netlify deployments
-* [Better defaults](#security-headers) for configuring HTTPS
-* [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
+For hosting, I wanted something that required zero maintenance. That meant and VPC solution was a non starter. S3 is great for static websites but for something like a blog I would have to keep updating the bucket all the time, including fixing typos and such. That's when I stumbled upon [Netlify](https://netlify.com). Netlify is great. I was able to get my blog running in a matter of minutes. It has some great features:
 
-For more information on these features go to the [Atlas](https://github.com/indigotree/atlas) repo.
+* Easy setup
+* Support for easy deploy from a Github repo
+* Support for custom domains with SSL (they use Lets Encrypt)
+* Support for preview builds via PRs
+
+The best part. Netlify has a 100% free personal plan that has all of the above features. My workflow now is simple - Write a post, push to github, Netlify deploys it in less than a minute. 
 
 ## Additions
 
-A few modifications have been done to the base Atlas boilerplate code to fit my needs.
+This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). I have modified it to fit my needs.
 
 * Use [normalize.css](https://github.com/necolas/normalize.css) and a modified version of [Skeleton](https://github.com/dhg/Skeleton/)
 * Minify CSS action added to the gulpfile that minifies and concatinates all the CSS files into one `site.css` file
@@ -36,7 +56,7 @@ A few modifications have been done to the base Atlas boilerplate code to fit my 
 
 ### Layout Modifications
 
-The layout is loosely based on [Fatih Arslan's blog](https://arslan.io), [Attila Ghost theme](https://github.com/zutrinken/attila) and styles from my other [photography](https://jogi.photos) website.
+The layout is loosely based on [Fatih Arslan's blog](https://arslan.io), [Attila Ghost theme](https://github.com/zutrinken/attila) and styles from my other [photography](https://jogi.photos) website. The goal that I set out with was to have a very clean design.
 
 * The main page consists of a blog header that only shows up on the home page
 * Rest all pages have a mini nav bar with the blog title
@@ -45,19 +65,6 @@ The layout is loosely based on [Fatih Arslan's blog](https://arslan.io), [Attila
 * Show tags at the bottom of the single post page controlled by `displayPostTags` in `config.yaml`
 * Footer with links to XML RSS, JSON Feed and Archive page
 
-## Prerequisite
-
-Atlas does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below.
-
-## Getting Started
-
-To get started, you can either clone the repository, or deploy straight to [Netlify](#deploy-to-netlify). Then run the following from the project root:
-
-```
-npm install
-npm run server
-```
-
 ### Available Commands
 
 There are 3 commands available:
@@ -65,6 +72,8 @@ There are 3 commands available:
 * `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
 * `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
 * `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
+
+Before you can run this, make sure you run `npm install` to install the dependencies.
 
 
 ## File Structure
@@ -109,12 +118,10 @@ There are 3 commands available:
 │ package.json
 ```
 
-## Deploy to Netlify
+## What's Next
+My todo list right now:
 
-You can deploy directly to Netlify using this button:
+* Add support for related posts
+* Better image support (wider, @2x images)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jvashishtha/jogi.blog)
-
-## License
-
-MIT © [Vashishtha Jogi](https://jogi.blog)
+If you have any questions/feedback feel free to hit me up on Twitter: [@VashishthaJogi](https://twitter.com/VashishthaJogi).
