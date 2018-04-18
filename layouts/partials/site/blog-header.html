@@ -1,6 +1,11 @@
 <header class="blog-header">
     <div class="inner">
         <h1 class="blog-name"><a href='{{ .Site.BaseURL }}'>{{ .Site.Params.name }}</a></h1>
-        <span class="blog-description">{{ .Site.Params.bio | markdownify }}</span>
+        <p class="blog-description">{{ .Site.Params.bio | markdownify }}</p>
+        <div class="blog-icons">
+        	{{ with .Site.Social.github }}<a href="{{ . }}"><img src="/images/github.svg"></a>{{ end }}
+			{{ with .Site.Social.twitter }}<a href="{{ . }}"><img src="/images/twitter.svg"></a>{{ end }}
+			{{ with .Site.Social.photography }}<a href="{{ . }}"><img src="/images/camera.svg"></a>{{ end }}
+        </div>
     </div>
 </header>

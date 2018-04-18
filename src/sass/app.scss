@@ -265,6 +265,29 @@ footer {
     color: $color-dark-gray;
 }
 
+.blog-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        margin: .5em .8em 0;
+        opacity: .7;
+
+        &:hover {
+            transition-duration: .2s;
+            transition-property: opacity;
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 1.5em;
+        height: 1.5em;
+        margin: auto;
+    }
+}
+
 // Post Content
 .post-header {
     .has-cover {
