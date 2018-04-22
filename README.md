@@ -36,7 +36,7 @@ A few modifications have been done to the base Atlas boilerplate code to fit my 
 
 ### Layout Modifications
 
-The layout is loosely based on [Fatih Arslan's blog](https://arslan.io), [Attila Ghost theme](https://github.com/zutrinken/attila) and styles from my other [photography](https://jogi.photos) website.
+The layout is loosely based on [Attila Ghost theme](https://github.com/zutrinken/attila) and styles from my other [photography](https://jogi.photos) website.
 
 * The main page consists of a blog header that only shows up on the home page
 * Rest all pages have a mini nav bar with the blog title
@@ -113,7 +113,7 @@ There are 3 commands available:
 
 You can deploy directly to Netlify using this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jvashishtha/jogi.blog)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jogi/jogi.blog)
 
 ## License
 
