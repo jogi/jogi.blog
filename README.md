@@ -47,7 +47,7 @@ The layout is loosely based on [Attila Ghost theme](https://github.com/zutrinken
 
 ## Prerequisite
 
-Atlas does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below.
+This starter project does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below.
 
 ## Getting Started
 
