@@ -3,7 +3,7 @@ languageCode: en-us
 title: Vashishtha Jogi
 enableRobotsTXT: true
 disableAliases: true
-googleAnalytics: UA-4839600-11
+# googleAnalytics: UA-4839600-11
 pygmentsUseClasses: true
 pygmentsCodeFences: true
 paginate: 10
