@@ -30,11 +30,6 @@ params:
   subtitle404: ''
   disallow_search_engines: false
 
-social:
-  twitter: 'https://www.twitter.com/VashishthaJogi'
-  github: 'https://www.github.com/jogi'
-  photography: 'https://jogi.photos'
-
 mediaTypes:
   text/netlify:
     suffixes: ['']
