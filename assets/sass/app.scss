@@ -288,6 +288,15 @@ footer {
     }
 }
 
+.nav-item {
+    .blog-icons {
+        img {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}
+
 // Post Content
 .post-header {
     .has-cover {

@@ -37,7 +37,7 @@ social:
 
 mediaTypes:
   text/netlify:
-    suffix: ''
+    suffixes: ['']
     delimiter: ''
 outputFormats:
   json:

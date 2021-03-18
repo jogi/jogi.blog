@@ -10,7 +10,6 @@ This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](h
 
 Atlas provides the following features out of the box:
 
-* A set of [Gulp](/gulpfile.babel.js) tasks for SASS, Linting, ES2015, Image compression
 * Environment driven `robots.txt` file (disallows robots on everything other than production)
 * Base HTML templates with easy customisation/extension
 * [Configuration](/netlify.toml) for Netlify deployments
@@ -24,7 +23,7 @@ For more information on these features go to the [Atlas](https://github.com/indi
 A few modifications have been done to the base Atlas boilerplate code to fit my needs.
 
 * Use [normalize.css](https://github.com/necolas/normalize.css) and a modified version of [Skeleton](https://github.com/dhg/Skeleton/)
-* Minify CSS action added to the gulpfile that minifies and concatinates all the CSS files into one `site.css` file
+* Minify CSS action added to the `styles.html` that minifies and concatinates all the CSS files into one `site.css` file
 * Use Hugo's inbuilt syntax highlighting with Xcode syntax style
 * Added pagination for posts with 10 posts/page by default
 * Remove Netlify CMS
@@ -90,6 +89,7 @@ There are 3 commands available:
 │           │ nav.html                 - Top nav that shows up on non home pages
 │           │ blog-header.html         - Site header that shows up on the home page
 │           │ pagination.html          - Pagination links
+│           │ post-summary.html        - Post summary shown on the home page
 │           │ footer.html              - Sites primary <footer>
 │           │ twitter-card.html        - Twitter card meta tags
 │           │ scripts.html             - JavaScript <script> referenced before closing </body>
@@ -104,7 +104,6 @@ There are 3 commands available:
 │ LICENSE
 │ README.md
 │ config.yaml                          - Hugo configuration
-│ gulpfile.babel.js                    - Gulp configuration/tasks
 │ netlify.toml                         - Netlify configuration
 │ package.json
 ```

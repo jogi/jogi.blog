@@ -1,1 +1,5 @@
-<link rel="stylesheet" href="{{ "css/site.css" | absURL }}">
+{{- $CSS := slice (resources.Get "css/normalize.css") (resources.Get "css/skeleton.css") (resources.Get "css/syntax.css") | resources.Concat "css/site.css" | minify }}
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
+
+{{ $s := resources.Get "sass/app.scss" | toCSS | postCSS (dict "config" "postcss.config.js") | minify }}
+<link rel="stylesheet" href="{{ $s.RelPermalink }}" />
