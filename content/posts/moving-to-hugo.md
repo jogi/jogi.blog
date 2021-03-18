@@ -44,12 +44,12 @@ The best part. Netlify has a 100% free personal plan that has all of the above f
 This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). I have modified it to fit my needs.
 
 * Use [normalize.css](https://github.com/necolas/normalize.css) and a modified version of [Skeleton](https://github.com/dhg/Skeleton/)
-* Minify CSS action added to the gulpfile that minifies and concatinates all the CSS files into one `site.css` file
+* Minify CSS action added to the `styles.html` that minifies and concatenates all the CSS files into one `site.css` file
 * Use Hugo's inbuilt syntax highlighting with Xcode syntax style
 * Added pagination for posts with 10 posts/page by default
 * Remove Netlify CMS
-* No other javascript except Google Analytics
-* Use YAML all around (TOML is nice but I like YAML)
+* Zero Javascript usage
+* Use YAML for `config`
 * Added an [Archive](https://jogi.blog/archive/) page inspired from [David Tran](https://davidtranscend.com/blog/how-to-create-an-archives-page-with-hugo/)
 * Added [JSON Feed](https://jsonfeed.org) generation in addition to XML RSS Feed
 * Added [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started) support
@@ -98,6 +98,7 @@ Before you can run this, make sure you run `npm install` to install the dependen
 │           │ meta.html                - Site <meta> tags
 │           │ nav.html                 - Top nav that shows up on non home pages
 │           │ blog-header.html         - Site header that shows up on the home page
+│           │ post-summary.html        - Summary of a post shown on the home page
 │           │ pagination.html          - Pagination links
 │           │ footer.html              - Sites primary <footer>
 │           │ twitter-card.html        - Twitter card meta tags
@@ -113,7 +114,6 @@ Before you can run this, make sure you run `npm install` to install the dependen
 │ LICENSE
 │ README.md
 │ config.yaml                          - Hugo configuration
-│ gulpfile.babel.js                    - Gulp configuration/tasks
 │ netlify.toml                         - Netlify configuration
 │ package.json
 ```
