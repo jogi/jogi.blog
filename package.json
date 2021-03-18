@@ -2,9 +2,8 @@
   "name": "atlas",
   "private": true,
   "scripts": {
-    "start": "hugo server",
-    "build": "hugo && npm run build",
-    "build:preview": "hugo --buildDrafts --buildFuture && npm run build",
+    "build": "hugo",
+    "build:preview": "hugo --buildDrafts --buildFuture",
     "server": "hugo server"
   },
   "dependencies": {
