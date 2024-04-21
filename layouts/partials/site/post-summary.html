@@ -1,6 +1,6 @@
 <article class="post">
 	<header class="post-header">
-		<h2 class="post-title"><a href='{{ .URL }}'>{{ .Title }}</a></h2>
+		<h2 class="post-title"><a href='{{ .Permalink }}'>{{ .Title }}</a></h2>
 		<span class="post-meta">
 			<time>{{ .Date.Format "January 2, 2006" }}</time>
 				{{ with .Params.categories }}
@@ -16,6 +16,6 @@
 	</header>
 	<section class="post-excerpt">
 		<p>{{ .Description | markdownify }}</p>
-		<a href='{{ .URL }}'>Continue reading →</span></a>
+		<a href='{{ .Permalink }}'>Continue reading →</span></a>
 	</section>
 </article>
