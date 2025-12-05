@@ -34,5 +34,3 @@ That’s it. This will redirect all the requests to www.example.com to your-hero
 6. In the Forward to field, enter the URL you want to forward your domain name to.
 7. To automatically update your nameservers to accommodate your forwarding changes, select Update my DNS setting to support this change.
 8. Click OK.
-
-All set! Wasn’t that easy?
