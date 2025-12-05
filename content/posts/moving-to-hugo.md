@@ -2,78 +2,78 @@
 author: Vashishtha Jogi
 categories:
   - Programming
-date: 2018-04-15T14:08:55-07:00
+date: 2025-12-05T14:08:55-07:00
 description: >-
-  I recently moved my blog to Hugo. After going through a few how-tos, posts about where to host it, etc. I have the final result. This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas) modified to fit my needs. Here are some notes that I took along the way.
+  I recently moved my blog to Hugo. After exploring different options for hosting, I settled on GitHub Pages with automated deployment. This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). Here are some notes from the process.
 draft: false
 slug: moving-to-hugo
 tags:
   - programming
   - hugo
-  - netlify
+  - github-pages
 title: "Moving to Hugo"
 ---
 
-I have picked up blogging again. I keep telling myself that I will keep blogging this time. Not sure how long it will last, but here goes the first post after a long time. Recently I moved my blog to Hugo. After going through a few how-tos, posts about where to host it, etc. I have the final result. Here are some notes that I took along the way.
+I've picked up blogging again. I keep telling myself that I'll keep at it this time. Not sure how long it will last, but here goes the first post after a long time. Recently I moved my blog to Hugo. After exploring different static site generators and hosting options, I landed on Hugo with GitHub Pages. Here are some notes from the process.
 
-Before stumbling upon [Hugo](https://gohugo.io) I took a look at numerous other solutions. The good old Wordpress, Tumblr, Micro.blog, Ghost, Squarespace and Jekyll. Each one of those has their shortcomings. Some of them are expensive to host ($20/month for Ghost, $12/month for Squarespace), some of those are not so expensive ($4/month for Wordpress). Some of those give you a little control over design by the way of templates, some of them give you complete control (Hugo and Jekyll). I love static websites for their speed. Squarespace and Ghost are nice but they are bloated and are expensive with very little control over.
+Before stumbling upon [Hugo](https://gohugo.io), I took a look at numerous other solutions: the good old WordPress, Tumblr, Micro.blog, Ghost, Squarespace, and Jekyll. Each one has its shortcomings. Some are expensive to host ($20/month for Ghost, $12/month for Squarespace), while others are more affordable ($4/month for WordPress). Some give you limited control over design through templates, while others give you complete control (Hugo and Jekyll). I love static websites for their speed. Squarespace and Ghost are nice, but they're bloated and expensive with limited customization options.
 
 Here are the requirements I had for this blog:
 
 * Static website
 * Cheap hosting
-* Clean design with full conrol
+* Clean design with full control
 * No commenting support
 * Static syntax highlighting
-* SSL support for hosting
+* SSL support
 * [SCSS](https://sass-lang.com) support
 
-Jekyll satisfies almost all of the above requirements but it requires Ruby. I am not a huge fan of Ruby (I have been bitten in the past, details of which warrant another post). Hugo seemed like a very good option.
+Jekyll satisfies almost all of these requirements, but it requires Ruby. I'm not particularly fond of Ruby (I've been bitten in the past—details of which warrant another post). Hugo seemed like a good alternative.
 
-For hosting, I wanted something that required zero maintenance. That meant and VPC solution was a non starter. S3 is great for static websites but for something like a blog I would have to keep updating the bucket all the time, including fixing typos and such. That's when I stumbled upon [Netlify](https://netlify.com). Netlify is great. I was able to get my blog running in a matter of minutes. It has some great features:
+For hosting, I wanted something with minimal maintenance. VPS solutions felt like overkill. S3 is great for static websites but would require manual updates for every change. That's when I discovered [GitHub Pages](https://pages.github.com/). It turned out to be a good fit:
 
-* Easy setup
-* Support for easy deploy from a Github repo
-* Support for custom domains with SSL (they use Lets Encrypt)
-* Support for preview builds via PRs
+* Simple setup
+* Automatic deployment from a GitHub repo
+* Support for custom domains with SSL
+* Free hosting for public repositories
+* GitHub Actions for automated builds
 
-The best part. Netlify has a 100% free personal plan that has all of the above features. My workflow now is simple - Write a post, push to github, Netlify deploys it in less than a minute. 
+My workflow is straightforward: write a post, push to GitHub, and GitHub Actions builds and deploys it automatically. 
 
-## Additions
+## Customizations
 
-This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). I have modified it to fit my needs.
+This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). I made some adjustments along the way:
 
-* Use [normalize.css](https://github.com/necolas/normalize.css) and a modified version of [Skeleton](https://github.com/dhg/Skeleton/)
-* Minify CSS action added to the `styles.html` that minifies and concatenates all the CSS files into one `site.css` file
-* Use Hugo's inbuilt syntax highlighting with Xcode syntax style
-* Added pagination for posts with 10 posts/page by default
-* Remove Netlify CMS
-* Zero Javascript usage
-* Use YAML for `config`
-* Added an [Archive](https://jogi.blog/archive/) page inspired from [David Tran](https://davidtranscend.com/blog/how-to-create-an-archives-page-with-hugo/)
-* Added [JSON Feed](https://jsonfeed.org) generation in addition to XML RSS Feed
-* Added [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started) support
+* Uses [normalize.css](https://github.com/necolas/normalize.css) and a modified version of [Skeleton](https://github.com/dhg/Skeleton/)
+* CSS minification in `styles.html` that concatenates all CSS files into one `site.css` file
+* Hugo's built-in syntax highlighting with Monokai style
+* Pagination with 10 posts per page
+* Minimal JavaScript (just Google Analytics)
+* YAML configuration files
+* An [Archive](https://jogi.blog/archive/) page (inspired by [David Tran](https://davidtranscend.com/blog/how-to-create-an-archives-page-with-hugo/))
+* [JSON Feed](https://jsonfeed.org) generation alongside XML RSS
+* [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started) support
 
-### Layout Modifications
+### Layout
 
-The layout is loosely based on [Fatih Arslan's blog](https://arslan.io), [Attila Ghost theme](https://github.com/zutrinken/attila) and styles from my other [photography](https://jogi.photos) website. The goal that I set out with was to have a very clean design.
+The layout draws inspiration from [Fatih Arslan's blog](https://arslan.io), [Attila Ghost theme](https://github.com/zutrinken/attila), and my [photography](https://jogi.photos) website. I was aiming for a clean, simple design:
 
-* The main page consists of a blog header that only shows up on the home page
-* Rest all pages have a mini nav bar with the blog title
-* Pagination with links to Older and Newer Posts along with the page number context
-* Single post page has the date and a link to the category(s) the post is in
-* Show tags at the bottom of the single post page controlled by `displayPostTags` in `config.yaml`
-* Footer with links to XML RSS, JSON Feed and Archive page
+* Blog header on the home page
+* Minimal nav bar with the blog title on other pages
+* Pagination with links to older and newer posts
+* Post pages show the date and category links
+* Tags at the bottom of posts (controlled by `displayPostTags` in `config.yaml`)
+* Footer with links to XML RSS, JSON Feed, and Archive page
 
-### Available Commands
+### Development
 
-There are 3 commands available:
+The setup includes a few npm scripts for local development:
 
-* `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
-* `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
-* `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
+* `npm run build` - Builds assets and runs `hugo`
+* `npm run build:preview` - Same as `build`, but includes drafts and future posts
+* `npm run server` - Starts a local server with live reload
 
-Before you can run this, make sure you run `npm install` to install the dependencies.
+Run `npm install` first to install dependencies.
 
 
 ## File Structure
@@ -82,9 +82,7 @@ Before you can run this, make sure you run `npm install` to install the dependen
 │
 └──── /layouts                         - Template files
 │   │ 404.html                         - 404 Template
-│   │ index.json                       - JSON Feed conforming template
-│   │ index.headers                    - Custom Netlify HTTP headers
-│   │ index.redirects                  - Custom Netlify redirect rules
+│   │ index.json                       - JSON Feed template
 │   │ robots.txt                       - Template for robots.txt
 │   │
 │   └──── /_default                    - Base templates for list & singular pages
@@ -94,34 +92,37 @@ Before you can run this, make sure you run `npm install` to install the dependen
 │   │
 │   └──── /partials                    - Partials
 │       │
-│       └──── /site                    - Site partials loaded into _default/baseof.html template
+│       └──── /site                    - Site partials
 │           │ meta.html                - Site <meta> tags
-│           │ nav.html                 - Top nav that shows up on non home pages
-│           │ blog-header.html         - Site header that shows up on the home page
-│           │ post-summary.html        - Summary of a post shown on the home page
+│           │ nav.html                 - Top navigation bar
+│           │ blog-header.html         - Site header on home page
+│           │ post-summary.html        - Post summary on home page
 │           │ pagination.html          - Pagination links
-│           │ footer.html              - Sites primary <footer>
+│           │ footer.html              - Site footer
 │           │ twitter-card.html        - Twitter card meta tags
-│           │ scripts.html             - JavaScript <script> referenced before closing </body>
-│           │ styles.html              - Stylesheets referenced before closing </head>
+│           │ scripts.html             - JavaScript scripts
+│           │ styles.html              - Stylesheets
 │   │
-|   └──── /src                         - Source files for assets (SASS, JS, Images, Fonts etc)
+|   └──── /src                         - Source files for assets
 │   │
 │   └──── /static                      - Hugo static resources
+│
+└──── /.github/workflows               - GitHub Actions workflows
+│   │ hugo.yml                         - Build and deploy workflow
 │
 │ .gitignore
 │ .sass-lint.yml                       - Linting rules for sass-lint
 │ LICENSE
 │ README.md
-│ config.yaml                          - Hugo configuration
-│ netlify.toml                         - Netlify configuration
+│ config/_default/config.yaml          - Hugo configuration
 │ package.json
 ```
 
 ## What's Next
-My todo list right now:
 
-* Add support for related posts
-* Better image support (wider, @2x images)
+Some things I'd like to add:
 
-If you have any questions/feedback feel free to hit me up on Twitter: [@VashishthaJogi](https://twitter.com/VashishthaJogi).
+* Support for related posts
+* Better image support (wider images, @2x retina support)
+
+If you have questions or feedback, feel free to reach out on Twitter: [@VashishthaJogi](https://twitter.com/VashishthaJogi).
