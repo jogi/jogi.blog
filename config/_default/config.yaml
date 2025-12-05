@@ -4,9 +4,13 @@ title: Vashishtha Jogi
 enableRobotsTXT: true
 disableAliases: true
 # googleAnalytics: UA-4839600-11
-pygmentsUseClasses: true
-pygmentsCodeFences: true
 paginate: 10
+
+markup:
+  highlight:
+    style: monokai
+    lineNos: false
+    noClasses: false
 
 params:
   name: Vashishtha Jogi
@@ -29,32 +33,18 @@ params:
   title404: ''
   subtitle404: ''
   disallow_search_engines: false
+  mainSections:
+    - posts
 
-mediaTypes:
-  text/netlify:
-    suffixes: ['']
-    delimiter: ''
 outputFormats:
   json:
     mediaType: application/json
     baseName: index
     isPlainText: true
-  REDIRECTS:
-    mediatype: text/netlify
-    baseName: _redirects
-    isPlainText: true
-    notAlternative: true
-  HEADERS:
-    mediatype: text/netlify
-    baseName: _headers
-    isPlainText: true
-    notAlternative: true
 
 outputs:
   home:
     - HTML
     - JSON
-    - REDIRECTS
-    - HEADERS
   page:
     - HTML
