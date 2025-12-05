@@ -4,7 +4,9 @@ title: Vashishtha Jogi
 enableRobotsTXT: true
 disableAliases: true
 # googleAnalytics: UA-4839600-11
-paginate: 10
+
+pagination:
+  pagerSize: 10
 
 markup:
   highlight:
