@@ -2,7 +2,7 @@
 author: Vashishtha Jogi
 categories:
   - Programming
-date: 2025-12-05T14:08:55-07:00
+date: 2025-12-04T14:08:55-07:00
 description: >-
   I recently moved my blog to Hugo. After exploring different options for hosting, I settled on GitHub Pages with automated deployment. This [Hugo](https://gohugo.io/) blog is based on the [Atlas, Hugo Boilerplate](https://github.com/indigotree/atlas). Here are some notes from the process.
 draft: false
